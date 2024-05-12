@@ -1,6 +1,24 @@
 class EntriesController < ApplicationController
 
   def index
+    @entries = Entry.all
+  end
+  
+  def show
+    @entries = Entry.find.by({"id" => params["id"]})
+  end
+  
+  def new
+  
+  end
+  
+  def create
+    @entry = Entries.new
+    @entry["title"] = params["title"]
+    @entry["description"] = params["description"]
+    @entry["date"] = params["date"]
+    @entry.save
+    redirect_to "/entries"
   end
 
 end
