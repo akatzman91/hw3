@@ -2,8 +2,10 @@
 
 <ul>
   <% for entry in @entries %>
+    <% place = Place.find_by({"id" => entry["entry_id"]}"%>
     <li>
       <a href="/entries/<%= entry["id"] %>"><%= entry["name"] %></a>
+      <%= place["name"] %>
     </li>
   <% end %>
 </ul>
