@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
     @entry = Entries.new
     @entry["title"] = params["title"]
     @entry["description"] = params["description"]
-    @entry["date"] = params["date"]
+    @entry["posted_on"] = params["posted_on"]
     @entry.save
     redirect_to "/entries"
   end
