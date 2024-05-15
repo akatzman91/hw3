@@ -10,7 +10,7 @@ def show
 end
 
 def new
-
+  @place = Place.new
 end
 
 def create

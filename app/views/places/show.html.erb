@@ -1,7 +1,7 @@
 <h1><%= @place["name"] %></h1>
 
 <ul>
-  <%= for entry in @entries %>
+  <% for entry in @entries %>
   <li>
     <a href="/entries/<%= entry["id"] %>">
       <%= entry["title"] %>, <%= entry["description"] %>, <%= entry["posted_on"] %>
@@ -15,7 +15,7 @@
 </p>
 
 <p> 
-  <a href=""/places">Back to All Places</a>
+  <a href="/places">Back to All Places</a>
 </p>
 
 <form action="/places/<%= @place["id"] %>" method="post">
