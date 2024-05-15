@@ -1,9 +1,5 @@
 class EntriesController < ApplicationController
   
- def show
-
- end
-  
  def new
   @place = Place.find_by({ "id" => params["place_id"]})
  end
