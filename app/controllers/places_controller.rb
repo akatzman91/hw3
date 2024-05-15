@@ -20,5 +20,4 @@ def create
   redirect_to "/places"
 end
 
-
 end
