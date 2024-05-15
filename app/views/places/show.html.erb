@@ -3,9 +3,10 @@
 <ul>
   <% for entry in @entries %>
   <li>
-    <a href="/entries/<%= entry["id"] %>">
-      <%= entry["title"] %>, <%= entry["description"] %>, <%= entry["posted_on"] %>
-    </a>
+    <a href="/entries/<%= entry["id"] %>"></a>
+      <h2><%= entry["title"] %></h2>
+      <h4><%= entry["posted_on"] %></h4>
+      <h5><%= entry["description"] %></h5>
   </li>
   <% end %>
 </ul>
@@ -17,8 +18,3 @@
 <p> 
   <a href="/places">Back to All Places</a>
 </p>
-
-<form action="/places/<%= @place["id"] %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button>Delete Place</button>
-</form>
