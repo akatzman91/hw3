@@ -5,7 +5,8 @@ def index
 end
 
 def show
-  @places = Place.find.by({"id" => params["id"]})
+  @place = Place.find_by({ "id" => params["id"]})
+  @entries = Entry.where({"place_id" => params["id"]})
 end
 
 def new
